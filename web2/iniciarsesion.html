@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Iniciar Sesión</title>
+</head>
+
+<body class="body-sesion">
+    <header>
+        <div class="header-container header-container--sesion">
+            <a href="./index.html">
+                <img class="header-container__logo header-container__logo--centrado" src="logo.png" alt="logo">
+            </a>
+
+            <nav class="header-container__nav">
+                <ul class="header-container__nav--ul">
+                    <li class="header-container__nav--ul">
+                        <a class="header-container__nav--item" href="#">Inicio</a>
+                        <a class="header-container__nav--item" href="./iniciarsesion.html">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-iniciarSesion">
+
+        <h1 class="section-iniciarSesion__titulo">BOYC</h1>
+        <h4>Iniciar Sesión</h4>
+        <form class="form-section__iniciarSesion" action="./anadirReceta.html" method="post">
+            <input class="section-sesion__input" placeholder="Usuario o Email" type="text" name="" id="">
+            <br>
+            <input class="section-sesion__input " placeholder="Contraseña" type="password">
+            <br>
+            <input class="section-sesion__button" type="submit" value="Iniciar Sesión">
+        </form>
+
+        <form class="form-section__registrarse" action="" method="post">
+
+
+            <input class="section-sesion__input section-sesion__input--registro " placeholder="Nombre" type="text" name="" id="">
+            <br>
+
+
+            <input class="section-sesion__input section-sesion__input--registro " placeholder="Apellidos" type="text" name="" id="">
+            <br>
+
+            <input class="section-sesion__input section-sesion__input--registro " placeholder="Usuario/Email" type="text" name="" id="">
+            <br>
+            <input class="section-sesion__input section-sesion__input--registro " placeholder="Contraseña" type="password">
+            <br>
+            <input class="section-sesion__input section-sesion__input--registro " placeholder="Repetir Contraseña" type="password">
+            <br>
+            <input class="section-sesion__input section-sesion__input--registro " type="date" name="" id="">
+            <br>
+            <input class="section-sesion__button" type="submit" value="Registrarse">
+        </form>
+        <section class="section-sesion__linkRegistro">
+            <a class="section-iniciarSesion__iniciar" href="javascript:void(0)">¿Ya tienes una cuenta? Inicia Sesión</a>
+
+        </section>
+        <section class="section-sesion__linkInicio">
+            <a class="" href="#">¿Has olvidado la contraseña?</a>
+            <br>
+            <a class="section-iniciarSesion__registrarse" href="javascript:void(0)">¿No te has Registrado aún?</a>
+
+        </section>
+
+    </section>
+
+    <footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".section-iniciarSesion__registrarse").click(function() {
+                    $(".form-section__iniciarSesion").hide();
+                    $("h4").replaceWith("<h4>Registrarse</h4>");
+                    $(".section-sesion__linkInicio").hide();
+                    $(".form-section__registrarse").show();
+                    $(".section-sesion__linkRegistro").show();
+                });
+                $(".section-iniciarSesion__iniciar").click(function() {
+                    $(".form-section__iniciarSesion").show();
+                    $("h4").replaceWith("<h4>Iniciar Sesión</h4>");
+                    $(".section-sesion__linkInicio").show();
+                    $(".form-section__registrarse").hide();
+                    $(".section-sesion__linkRegistro").hide();
+                })
+
+
+            });
+        </script>
+        <script>
+        </script>
+    </footer>
+
+
+
+</body>
+
+</html>
